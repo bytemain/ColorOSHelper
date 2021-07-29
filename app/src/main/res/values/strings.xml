@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Dual App</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">刷新率</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="usage">1. 显示与亮度 - 更多 - 屏幕刷新率，选智能切换\n2. 点击 `设置刷新率` 按钮\n设置一次如果无效请从第 1 步重新做\n原理就是把两个控制刷新率的值设置的特别小就可以了，推荐设置30，稳定会卡到最高帧率去</string>
+    <string name="set_hz">设置刷新率</string>
+    <string name="go_setting">显示与亮度</string>
+    <string name="go_dev">开发者选项</string>
+    <string name="text_boot">开机自启</string>
+    <string name="preference_file_key">settings</string>
+    <string name="settings_boot">settings_boot</string>
+</resources>
