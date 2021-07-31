@@ -70,7 +70,7 @@ fun createNotificationChannel(context: Context) {
 fun notify(context: Context) {
     val notificationBuilder =
         NotificationCompat.Builder(context, CHANNEL_ID)
-            .setSmallIcon(R.drawable.ic_menu_gallery)
+            .setSmallIcon(R.drawable.ic_menu_refresh_rate)
             .setContentTitle("设置成功")
             .setContentText("设置 30Hz 成功")
             .setCategory(NotificationCompat.CATEGORY_STATUS)

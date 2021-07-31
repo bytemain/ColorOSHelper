@@ -13,9 +13,9 @@
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="me.lengthmin.dualapp.ui.gallery.GalleryFragment"
+        android:name="me.lengthmin.dualapp.ui.refresh_rate.RefreshRateFragment"
         android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        tools:layout="@layout/fragment_refresh_rate" />
 
     <fragment
         android:id="@+id/nav_slideshow"

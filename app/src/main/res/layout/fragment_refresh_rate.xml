@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.gallery.GalleryFragment">
+    tools:context=".ui.refresh_rate.RefreshRateFragment">
 
     <TextView
         android:id="@+id/refresh_rate_info"
@@ -62,7 +62,7 @@
             android:inputType="text" />
 
         <Button
-            android:id="@+id/set90"
+            android:id="@+id/apply"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"

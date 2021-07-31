@@ -1,4 +1,4 @@
-package me.lengthmin.dualapp.ui.gallery
+package me.lengthmin.dualapp.ui.refresh_rate
 
 import android.content.Context
 import android.content.Intent
@@ -14,35 +14,34 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import com.google.android.material.snackbar.Snackbar
 import me.lengthmin.dualapp.R
 import me.lengthmin.dualapp.getRefreshRateDesc
 import me.lengthmin.dualapp.setRefreshRate
 
-class GalleryFragment : Fragment() {
+class RefreshRateFragment : Fragment() {
 
-    private lateinit var galleryViewModel: GalleryViewModel
+    private lateinit var refreshRateViewModel: RefreshRateViewModel
 
     override fun onCreateView(
             inflater: LayoutInflater,
             container: ViewGroup?,
             savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_gallery, container, false)
-        galleryViewModel =
-                ViewModelProvider(this).get(GalleryViewModel::class.java)
+        val root = inflater.inflate(R.layout.fragment_refresh_rate, container, false)
+        refreshRateViewModel =
+                ViewModelProvider(this).get(RefreshRateViewModel::class.java)
         val textView: TextView = root.findViewById(R.id.refresh_rate_info)
 
-        val set90: Button = root.findViewById(R.id.set90)
+        val apply: Button = root.findViewById(R.id.apply)
         val goSetting: Button = root.findViewById(R.id.goSetting)
         val goDev: Button = root.findViewById(R.id.goDev)
         val cbBoot: CheckBox = root.findViewById(R.id.cbBoot)
         val hzValue: EditText = root.findViewById(R.id.hz_value)
         textView.text = this.context?.let { it1 -> getRefreshRateDesc(it1) }
 
-        set90.setOnClickListener {
-            var v = hzValue.text.toString();
-            this.context?.setRefreshRate(if (v.isEmpty()) v else "30");
+        apply.setOnClickListener {
+            val v = hzValue.text.toString()
+            this.context?.setRefreshRate(if (v.isEmpty()) "30" else v)
             textView.text = this.context?.let { it1 -> getRefreshRateDesc(it1) }
         }
         goSetting.setOnClickListener {
@@ -54,7 +53,6 @@ class GalleryFragment : Fragment() {
                 flags = Intent.FLAG_ACTIVITY_NEW_TASK;
             }
             startActivity(intent)
-
         }
         goDev.setOnClickListener {
             val intent = Intent(Settings.ACTION_APPLICATION_DEVELOPMENT_SETTINGS).apply {
