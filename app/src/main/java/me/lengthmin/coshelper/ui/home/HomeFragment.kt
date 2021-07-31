@@ -1,4 +1,4 @@
-package me.lengthmin.dualapp.ui.home
+package me.lengthmin.coshelper.ui.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import me.lengthmin.dualapp.R
+import me.lengthmin.coshelper.R
 
 class HomeFragment : Fragment() {
 

@@ -1,4 +1,4 @@
-package me.lengthmin.dualapp
+package me.lengthmin.coshelper
 
 import android.content.BroadcastReceiver
 import android.content.Context

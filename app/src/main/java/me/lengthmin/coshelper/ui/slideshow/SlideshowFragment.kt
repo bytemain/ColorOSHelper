@@ -1,4 +1,4 @@
-package me.lengthmin.dualapp.ui.slideshow
+package me.lengthmin.coshelper.ui.slideshow
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
-import me.lengthmin.dualapp.R
+import me.lengthmin.coshelper.R
 
 class SlideshowFragment : Fragment() {
 

@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/nav_home"
-        android:name="me.lengthmin.dualapp.ui.home.HomeFragment"
+        android:name="me.lengthmin.coshelper.ui.home.HomeFragment"
         android:label="@string/menu_home"
         tools:layout="@layout/fragment_home" />
 
     <fragment
         android:id="@+id/nav_gallery"
-        android:name="me.lengthmin.dualapp.ui.refresh_rate.RefreshRateFragment"
+        android:name="me.lengthmin.coshelper.ui.refresh_rate.RefreshRateFragment"
         android:label="@string/menu_gallery"
         tools:layout="@layout/fragment_refresh_rate" />
 
     <fragment
         android:id="@+id/nav_slideshow"
-        android:name="me.lengthmin.dualapp.ui.slideshow.SlideshowFragment"
+        android:name="me.lengthmin.coshelper.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
 </navigation>

@@ -1,4 +1,4 @@
-package me.lengthmin.dualapp
+package me.lengthmin.coshelper
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package me.lengthmin.dualapp
+package me.lengthmin.coshelper
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

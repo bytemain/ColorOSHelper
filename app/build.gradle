@@ -8,7 +8,7 @@ android {
     buildToolsVersion "30.0.2"
 
     defaultConfig {
-        applicationId "me.lengthmin.dualapp"
+        applicationId "me.lengthmin.coshelper"
         minSdkVersion 21
         targetSdkVersion 21
         versionCode 1
@@ -44,7 +44,7 @@ android {
     flavorDimensions 'fake'
     android.applicationVariants.all { variant ->
         variant.outputs.all  {
-            outputFileName = "DualApp_${variant.buildType.name}_v${variant.versionName}.apk"
+            outputFileName = "ColorOSHelper_${variant.buildType.name}_v${variant.versionName}.apk"
         }
     }
 }

@@ -1,4 +1,4 @@
-package me.lengthmin.dualapp.ui.refresh_rate
+package me.lengthmin.coshelper.ui.refresh_rate
 
 import android.content.Context
 import android.content.Intent
@@ -14,9 +14,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import me.lengthmin.dualapp.R
-import me.lengthmin.dualapp.getRefreshRateDesc
-import me.lengthmin.dualapp.setRefreshRate
+import me.lengthmin.coshelper.R
+import me.lengthmin.coshelper.getRefreshRateDesc
+import me.lengthmin.coshelper.setRefreshRate
 
 class RefreshRateFragment : Fragment() {
 
