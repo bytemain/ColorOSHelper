@@ -10,7 +10,6 @@ import android.widget.Toast
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 
-private const val MIN_REFRESH_RATE = "min_refresh_rate"
 private const val PEAK_REFRESH_RATE = "peak_refresh_rate"
 
 
@@ -35,7 +34,7 @@ fun getRefreshRateDesc(context: Context): String {
         if (cursor != null) {
             if (cursor.moveToFirst()) {
                 do {
-                    if (cursor.getString(0).contains("refresh_rate")) {
+                    if (cursor.getString(0).equals(PEAK_REFRESH_RATE)) {
                         list.add("${cursor.getString(0)}: ${cursor.getString(1)}")
                     }
                 } while (cursor.moveToNext())
@@ -83,7 +82,6 @@ fun notify(context: Context) {
 }
 
 fun setRefreshRateByContext(context: Context, rate: String) {
-    setConfig(context, MIN_REFRESH_RATE, rate)
     setConfig(context, PEAK_REFRESH_RATE, rate)
 }
 

@@ -12,8 +12,9 @@ import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 import me.lengthmin.dualapp.R
 import me.lengthmin.dualapp.getRefreshRateDesc
 import me.lengthmin.dualapp.setRefreshRate
@@ -30,20 +31,18 @@ class GalleryFragment : Fragment() {
         val root = inflater.inflate(R.layout.fragment_gallery, container, false)
         galleryViewModel =
                 ViewModelProvider(this).get(GalleryViewModel::class.java)
-        val textView: TextView = root.findViewById(R.id.text_gallery)
-//        galleryViewModel.text.observe(viewLifecycleOwner, Observer {
-//            textView.text = it
-//        })
+        val textView: TextView = root.findViewById(R.id.refresh_rate_info)
+
         val set90: Button = root.findViewById(R.id.set90)
         val goSetting: Button = root.findViewById(R.id.goSetting)
         val goDev: Button = root.findViewById(R.id.goDev)
         val cbBoot: CheckBox = root.findViewById(R.id.cbBoot)
         val hzValue: EditText = root.findViewById(R.id.hz_value)
-        hzValue.setText("30")
         textView.text = this.context?.let { it1 -> getRefreshRateDesc(it1) }
 
         set90.setOnClickListener {
-            this.context?.setRefreshRate(hzValue.text.toString());
+            var v = hzValue.text.toString();
+            this.context?.setRefreshRate(if (v.isEmpty()) v else "30");
             textView.text = this.context?.let { it1 -> getRefreshRateDesc(it1) }
         }
         goSetting.setOnClickListener {
@@ -75,7 +74,10 @@ class GalleryFragment : Fragment() {
                 }
             }
         }
-
+        val fab: FloatingActionButton = root.findViewById(R.id.fab)
+        fab.setOnClickListener { view ->
+            textView.text = this.context?.let { it1 -> getRefreshRateDesc(it1) }
+        }
         return root
     }
 }
