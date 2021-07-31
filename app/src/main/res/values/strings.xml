@@ -10,8 +10,9 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">刷新率</string>
     <string name="menu_slideshow">Slideshow</string>
-    <string name="settings_usage">1. 显示与亮度 - 更多 - 屏幕刷新率，选智能切换\n2. 点击 `设置刷新率` 按钮</string>
-    <string name="usage">设置一次如果无效请从第 1 步重新做\n原理就是把两个控制刷新率的值设置的特别小就可以了，推荐设置30，稳定会卡到最高帧率去</string>
+    <string name="settings_usage1">1. 进入 显示与亮度 - 更多 - 屏幕刷新率，选智能切换</string>
+    <string name="settings_usage2">2. 输入要设置的刷新率值，然后点击 `应用` 按钮</string>
+    <string name="usage">卡最高帧率的做法就是把控制刷新率的值设置的特别小就可以了（原理未知），推荐设置 30，稳定会卡到最高帧率去\n不想稳定最高帧率的就清除本应用的数据即可。</string>
     <string name="set_hz">应用</string>
     <string name="go_setting">设置 - 显示与亮度</string>
     <string name="go_dev">开发者选项 - 去开启帧率显示</string>
