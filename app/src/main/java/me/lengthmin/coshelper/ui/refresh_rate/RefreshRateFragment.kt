@@ -73,7 +73,7 @@ class RefreshRateFragment : Fragment() {
             }
         }
         val fab: FloatingActionButton = root.findViewById(R.id.fab)
-        fab.setOnClickListener { view ->
+        fab.setOnClickListener { _ ->
             textView.text = this.context?.let { it1 -> getRefreshRateDesc(it1) }
         }
         return root
